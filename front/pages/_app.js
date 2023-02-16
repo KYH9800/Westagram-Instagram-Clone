@@ -4,7 +4,7 @@ import Head from 'next/head';
 // global.css
 import './global.css';
 
-const TODOLIST = ({ Component, pageProps }) => (
+const Westagram = ({ Component, pageProps }) => (
   <>
     <Head>
       <meta charSet="utf-8" />
@@ -14,8 +14,8 @@ const TODOLIST = ({ Component, pageProps }) => (
   </>
 );
 
-TODOLIST.propTypes = {
+Westagram.propTypes = {
   Component: PropTypes.func.isRequired,
 };
 
-export default TODOLIST;
+export default Westagram;
