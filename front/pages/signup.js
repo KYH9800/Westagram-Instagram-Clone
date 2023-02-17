@@ -2,34 +2,31 @@ import React from 'react';
 import Link from 'next/link';
 
 // styled-components
-import {
-  LoginBox,
-  LogoWrapper,
-  WestaLogo,
-  InputBox,
-  Input,
-  LoginBtn,
-  Line,
-  KakaoLoginBtnImg,
-  NaverLoginBtnImg,
-  NaverLogImg,
-  NaverLogText,
-  GoogleLoginBtnImg,
-  GoogleLogImg,
-  GoogleLogText,
-  SingupBox,
-  SingupBtn,
-} from '../styles/signupPage';
+import { SingupBoxWrapper, SignupBtn, LoginBox, LoginBtn, GuideTag } from '../styles/signupPage';
+import { LogoWrapper, WestaLogo, InputBox, Input, Line } from '../styles/loginPage';
+
+// components
+import SocialLogin from '../components/SocialLogin/SocialLogin';
 
 // 회원가입 페이지 Component
 const Signup = () => {
+  // TODO...
+
   return (
     <>
-      <LoginBox>
+      <SingupBoxWrapper>
         <label>Westagram Logo</label>
         <LogoWrapper>
           <WestaLogo src="/images/Westagram.png" />
         </LogoWrapper>
+
+        <GuideTag>
+          <p>친구들의 사진과 동영상을 보려면 가입하세요.</p>
+        </GuideTag>
+
+        <label>소셜 로그인 컴포넌트</label>
+        <SocialLogin />
+        <Line>또는</Line>
 
         <InputBox>
           <div>
@@ -38,42 +35,43 @@ const Signup = () => {
           </div>
 
           <div>
+            <label>성명</label>
+            <Input type="text" placeholder="성명" />
+          </div>
+
+          <div>
+            <label>사용자 이름</label>
+            <Input type="text" placeholder="사용자 이름" />
+          </div>
+
+          <div>
             <label>비밀번호 입력</label>
             <Input type="password" placeholder="비밀번호" />
           </div>
 
           <div>
-            <LoginBtn>로그인</LoginBtn>
+            <SignupBtn>가입</SignupBtn>
           </div>
         </InputBox>
-        <Line>또는</Line>
-        <div className="social-login-box">
-          <div>
-            <KakaoLoginBtnImg src="/images/kakao_login_medium_wide.png" />
-          </div>
-          <div>
-            <NaverLoginBtnImg>
-              <NaverLogImg src="/images/btnG_아이콘사각.png" />
-              <NaverLogText>네이버 로그인</NaverLogText>
-            </NaverLoginBtnImg>
-          </div>
-          <div>
-            <GoogleLoginBtnImg>
-              <GoogleLogImg src="/images/btn_google_light_normal_ios@2x.png" />
-              <GoogleLogText>구글 로그인</GoogleLogText>
-            </GoogleLoginBtnImg>
-          </div>
-        </div>
-      </LoginBox>
 
-      <SingupBox>
-        <SingupBtn>
-          계정이 없으신가요?
+        <GuideTag>
+          <p>
+            가입하시면 Westargram의 <span>약관</span>, <span>데이터 정책</span>
+          </p>
+          <p>
+            및 <span>쿠키 정책</span>에 동의하게 됩니다.
+          </p>
+        </GuideTag>
+      </SingupBoxWrapper>
+
+      <LoginBox>
+        <LoginBtn>
+          계정이 있으신가요?
           <span>
-            <Link href="/signup">가입하기</Link>
+            <Link href="/">로그인</Link>
           </span>
-        </SingupBtn>
-      </SingupBox>
+        </LoginBtn>
+      </LoginBox>
     </>
   );
 };
