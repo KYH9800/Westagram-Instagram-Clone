@@ -1,6 +1,6 @@
 import React from 'react';
 
-import AppLayout from '../components/AppLayout';
+import AppLayout from '../components/AppLayout/AppLayout';
 
 const myPage = () => {
   return (

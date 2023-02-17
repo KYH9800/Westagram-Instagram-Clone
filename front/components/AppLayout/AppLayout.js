@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import styled from 'styled-components';
 
-import Navbar from './NavbarList/Navbar';
+import Navbar from '../NavbarList/Navbar';
 
 const AppLayout = ({ children }) => {
   return (
