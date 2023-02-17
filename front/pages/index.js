@@ -10,16 +10,12 @@ import {
   Input,
   LoginBtn,
   Line,
-  KakaoLoginBtnImg,
-  NaverLoginBtnImg,
-  NaverLogImg,
-  NaverLogText,
-  GoogleLoginBtnImg,
-  GoogleLogImg,
-  GoogleLogText,
   SingupBox,
   SingupBtn,
 } from '../styles/loginPage';
+
+// components
+import SocialLogin from '../components/SocialLogin/SocialLogin';
 
 // 로그인 페이지 Component
 const Login = () => {
@@ -45,27 +41,15 @@ const Login = () => {
           </div>
 
           <div>
-            <LoginBtn>로그인</LoginBtn>
+            <Link href="/home" style={{ 'text-decoration': 'none' }}>
+              <LoginBtn>로그인</LoginBtn>
+            </Link>
           </div>
         </InputBox>
+
+        <label>소셜 로그인 컴포넌트</label>
         <Line>또는</Line>
-        <div className="social-login-box">
-          <div>
-            <KakaoLoginBtnImg src="/images/kakao_login_medium_wide.png" />
-          </div>
-          <div>
-            <NaverLoginBtnImg>
-              <NaverLogImg src="/images/btnG_아이콘사각.png" />
-              <NaverLogText>네이버 로그인</NaverLogText>
-            </NaverLoginBtnImg>
-          </div>
-          <div>
-            <GoogleLoginBtnImg>
-              <GoogleLogImg src="/images/btn_google_light_normal_ios@2x.png" />
-              <GoogleLogText>구글 로그인</GoogleLogText>
-            </GoogleLoginBtnImg>
-          </div>
-        </div>
+        <SocialLogin />
       </LoginBox>
 
       <SingupBox>
