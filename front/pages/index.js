@@ -1,59 +1,83 @@
 import React from 'react';
+import Link from 'next/link';
 
-import styled from 'styled-components';
+// styled-components
+import {
+  LoginBox,
+  LogoWrapper,
+  WestaLogo,
+  InputBox,
+  Input,
+  LoginBtn,
+  Line,
+  KakaoLoginBtnImg,
+  NaverLoginBtnImg,
+  NaverLogImg,
+  NaverLogText,
+  GoogleLoginBtnImg,
+  GoogleLogImg,
+  GoogleLogText,
+  SingupBox,
+  SingupBtn,
+} from '../styles/loginPage';
 
+// 로그인 페이지 Component
 const Login = () => {
+  // TODO...
+
   return (
-    <LoginBox>
-      <label>Westagram Logo</label>
-      <LogoWrapper>
-        <WestaLogo src="/images/Westagram.png" />
-      </LogoWrapper>
+    <>
+      <LoginBox>
+        <label>Westagram Logo</label>
+        <LogoWrapper>
+          <WestaLogo src="/images/Westagram.png" />
+        </LogoWrapper>
 
-      <div>
-        <div>
-          <label>이메일</label>
-          <span>email</span>
-          <input type="email" placeholder="이메일을 입력해주세요" />
+        <InputBox>
+          <div>
+            <label>이메일</label>
+            <Input type="email" placeholder="이메일을 입력하세요" />
+          </div>
+
+          <div>
+            <label>비밀번호 입력</label>
+            <Input type="password" placeholder="비밀번호" />
+          </div>
+
+          <div>
+            <LoginBtn>로그인</LoginBtn>
+          </div>
+        </InputBox>
+        <Line>또는</Line>
+        <div className="social-login-box">
+          <div>
+            <KakaoLoginBtnImg src="/images/kakao_login_medium_wide.png" />
+          </div>
+          <div>
+            <NaverLoginBtnImg>
+              <NaverLogImg src="/images/btnG_아이콘사각.png" />
+              <NaverLogText>네이버 로그인</NaverLogText>
+            </NaverLoginBtnImg>
+          </div>
+          <div>
+            <GoogleLoginBtnImg>
+              <GoogleLogImg src="/images/btn_google_light_normal_ios@2x.png" />
+              <GoogleLogText>구글 로그인</GoogleLogText>
+            </GoogleLoginBtnImg>
+          </div>
         </div>
+      </LoginBox>
 
-        <div>
-          <label>비밀번호 입력</label>
-          <span>password</span>
-          <input type="password" placeholder="비밀번호를 입력해주세요" />
-        </div>
-      </div>
-
-      <div>
-        <button>로그인</button>
-        <button>회원가입</button>
-      </div>
-    </LoginBox>
+      <SingupBox>
+        <SingupBtn>
+          계정이 없으신가요?
+          <span>
+            <Link href="/signup">가입하기</Link>
+          </span>
+        </SingupBtn>
+      </SingupBox>
+    </>
   );
 };
 
 export default Login;
-
-const LoginBox = styled.div`
-  label {
-    display: none;
-  }
-
-  border: 1px solid #9b9b9b;
-  border-radius: 3px;
-
-  width: 400px;
-  height: 50vh;
-
-  margin: 8% auto;
-`;
-
-const LogoWrapper = styled.div`
-  text-align: center;
-`;
-
-// Westagram logo
-const WestaLogo = styled.img`
-  margin: 10px 0;
-  height: 40px;
-`;
