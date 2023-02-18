@@ -1,17 +1,24 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import styled from 'styled-components';
-
+// components
 import Navbar from '../NavbarList/Navbar';
+import UserInfoCard from '../UserInfo/UserInfoCard';
+
+// styled-components
+import { GridWrapper, Main, Children, UserArea } from '../../styles/components/AppLayoutSt';
 
 const AppLayout = ({ children }) => {
+  // TODO...
+
   return (
     <GridWrapper>
       <Navbar />
       <Main>
         <Children>{children}</Children>
-        <UserArea>User</UserArea>
+        <UserArea>
+          <UserInfoCard />
+        </UserArea>
       </Main>
     </GridWrapper>
   );
@@ -22,32 +29,3 @@ AppLayout.propTypes = {
 };
 
 export default AppLayout;
-
-// 전체 그리드
-const GridWrapper = styled.div`
-  display: flex;
-  justify-content: space-between;
-`;
-
-// main component 부분
-const Main = styled.main`
-  display: flex;
-  justify-content: space-between;
-
-  margin: 0 auto;
-`;
-
-const Children = styled.div`
-  background-color: yellow;
-
-  margin-right: 60px;
-
-  width: 500px;
-`;
-
-const UserArea = styled.div`
-  background-color: gray;
-
-  width: 280px;
-  height: 45vh;
-`;

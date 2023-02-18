@@ -14,7 +14,7 @@ export const SingupBoxWrapper = styled.div`
   width: 400px;
   height: 62vh;
 
-  margin: 8% auto 0 auto;
+  margin: 6% auto 0 auto;
 `;
 
 // 로고

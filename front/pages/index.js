@@ -12,7 +12,7 @@ import {
   Line,
   SingupBox,
   SingupBtn,
-} from '../styles/loginPage';
+} from '../styles/pages/loginPage';
 
 // components
 import SocialLogin from '../components/SocialLogin/SocialLogin';
