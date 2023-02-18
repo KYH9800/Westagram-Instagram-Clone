@@ -14,7 +14,7 @@ export const LoginBox = styled.div`
   width: 400px;
   height: 47vh;
 
-  margin: 8% auto 0 auto;
+  margin: 6% auto 0 auto;
 `;
 
 // 로고

@@ -9,8 +9,9 @@ import {
   GoogleLoginBtnImg,
   GoogleLogImg,
   GoogleLogText,
-} from '../../styles/loginPage';
+} from '../../styles/pages/loginPage';
 
+// 소셜 로그인 컴포넌트
 const SocialLogin = () => {
   // TODO...
 

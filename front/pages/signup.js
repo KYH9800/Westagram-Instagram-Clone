@@ -2,8 +2,8 @@ import React from 'react';
 import Link from 'next/link';
 
 // styled-components
-import { SingupBoxWrapper, SignupBtn, LoginBox, LoginBtn, GuideTag } from '../styles/signupPage';
-import { LogoWrapper, WestaLogo, InputBox, Input, Line } from '../styles/loginPage';
+import { SingupBoxWrapper, SignupBtn, LoginBox, LoginBtn, GuideTag } from '../styles/pages/signupPage';
+import { LogoWrapper, WestaLogo, InputBox, Input, Line } from '../styles/pages/loginPage';
 
 // components
 import SocialLogin from '../components/SocialLogin/SocialLogin';
