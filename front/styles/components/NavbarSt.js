@@ -2,6 +2,11 @@ import styled from 'styled-components';
 
 // 메인 왼쪽 바
 export const NavWrapper = styled.div`
+  position: fixed;
+
+  z-index: 999;
+  background-color: #fff;
+
   width: 310px;
   height: 100vh;
 

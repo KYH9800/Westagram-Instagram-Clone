@@ -1,14 +1,20 @@
 import styled from 'styled-components';
 
 // Stories
-export const StoriesWrapper = styled.div`
-  display: flex;
-  overflow: auto;
-  white-space: nowrap;
-  // 스크롤바 숨기기
-  -ms-overflow-style: none;
-  ::-webkit-scrollbar {
-    display: none;
+export const SlickCustom = styled.div`
+  width: 470px;
+  .slick-prev:before,
+  .slick-next:before {
+    color: #a0a0a0;
+  }
+
+  .slick-dots {
+    bottom: -10px;
+  }
+
+  .slick-dots li button:before {
+    font-size: 27px;
+    content: '-';
   }
 `;
 // StoriesEntry
