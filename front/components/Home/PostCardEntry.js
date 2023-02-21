@@ -1,6 +1,9 @@
 import React from 'react';
 // styled-components
 import {
+  HeartOutlinedSt,
+  MessageOutlinedSt,
+  ShareAltOutlinedSt,
   PostCard,
   CardHeader,
   CerdInfo,
@@ -8,20 +11,23 @@ import {
   ClickEventBtnBox,
   LikeInfo,
   Content,
+  UserName,
+  ContentMore,
   CommentCount,
   CommentBox,
+  CommentHeartOutlinedSt,
   CommentInputBox,
   CommentInput,
+  CommentSubmitBtn,
 } from '../../styles/components/PostCardSt';
-// antd
-import { Avatar } from 'antd';
-import { HeartOutlined, MessageOutlined, ShareAltOutlined } from '@ant-design/icons';
+// Avatar
+import { AvatarSt } from '../../styles/components/UserInfoSt';
 
 const PostCardEntry = () => {
   return (
     <PostCard>
       <CardHeader>
-        <Avatar size={42} src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
+        <AvatarSt size={42} src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
         <CerdInfo>
           <div>rarax__x</div>
           <span>위치</span>
@@ -32,32 +38,33 @@ const PostCardEntry = () => {
       </PostCardImgWrapper>
       <ClickEventBtnBox>
         <span>
-          <HeartOutlined style={{ fontSize: '21px' }} />
+          <HeartOutlinedSt style={{ fontSize: '21px' }} />
         </span>
         <span>
-          <MessageOutlined style={{ fontSize: '21px' }} />
+          <MessageOutlinedSt style={{ fontSize: '21px' }} />
         </span>
         <span>
-          <ShareAltOutlined style={{ fontSize: '21px' }} />
+          <ShareAltOutlinedSt style={{ fontSize: '21px' }} />
         </span>
       </ClickEventBtnBox>
       <LikeInfo>
-        <span>rarax__w</span> 외에 <span>100명</span>의 사용자가 좋아합니다.
+        <UserName>rarax__w</UserName> 외에 <span>100명</span>의 사용자가 좋아합니다.
       </LikeInfo>
       <Content>
-        <span>rarax__w</span> 날씨가 좋다
+        <UserName>rarax__w</UserName> 날씨가 좋다 <ContentMore>...더보기</ContentMore>
       </Content>
       <CommentCount>댓글 3개 모두보기</CommentCount>
       <CommentBox>
         <div>
-          <span>rarax__w</span> <span>댓글을 답니다</span>
+          <UserName>rarax__w</UserName> <span>댓글을 답니다</span>
         </div>
         <div>
-          <HeartOutlined style={{ fontSize: '11px' }} />
+          <CommentHeartOutlinedSt />
         </div>
       </CommentBox>
       <CommentInputBox>
         <CommentInput type="text" placeholder="댓글 달기..." />
+        <CommentSubmitBtn>게시</CommentSubmitBtn>
       </CommentInputBox>
     </PostCard>
   );
