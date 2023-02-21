@@ -5,8 +5,6 @@ import StoriesEntry from './StoriesEntry';
 import { SlickCustom } from '../../styles/components/StoriesSt';
 // react-slick
 import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
 
 const mockData = [
   {

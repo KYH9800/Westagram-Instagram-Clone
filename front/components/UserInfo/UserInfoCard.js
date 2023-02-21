@@ -11,10 +11,11 @@ import {
   ChangeBtn,
   RecommendImpormation,
   RecommendLists,
-  UserInfoFooter,
 } from '../../styles/components/UserInfoSt';
+import { CustomLink } from '../../styles/Customs/CustomSt';
 // components
 import RecommendListEntry from './RecommendListEntry';
+import UserInfoFooter from './UserInfoFooter';
 
 // 메인 화면에서의 사용자 정보 카드 컴포넌트
 const UserInfoCard = () => {
@@ -22,9 +23,13 @@ const UserInfoCard = () => {
     <UserInfoCardBox>
       <MyInfoArea>
         <MyLogoName>
-          <AvatarSt size={57} src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
+          <CustomLink href="/user/kyh0506_">
+            <AvatarSt size={57} src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
+          </CustomLink>
           <NameWrapper>
-            <UserID>kyh0506_</UserID>
+            <CustomLink href="/user/kyh0506_">
+              <UserID>kyh0506_</UserID>
+            </CustomLink>
             <UserName>고윤혁</UserName>
           </NameWrapper>
         </MyLogoName>
@@ -43,17 +48,7 @@ const UserInfoCard = () => {
         <RecommendListEntry />
         <RecommendListEntry />
       </RecommendLists>
-      <UserInfoFooter>
-        <div>
-          <p>
-            <span>Github</span>∙<span>Notion</span> <span>이력서</span>∙<span>010-9800-5226</span>∙
-            <span>클론 프로젝트 소개</span>
-          </p>
-        </div>
-        <div>
-          <p>© 2023 WESTAGRAM FROM 고윤혁</p>
-        </div>
-      </UserInfoFooter>
+      <UserInfoFooter />
     </UserInfoCardBox>
   );
 };

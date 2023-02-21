@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 
 import { Avatar } from 'antd';
@@ -14,9 +14,15 @@ import {
 } from '@ant-design/icons';
 
 // styled-components
-import { NavWrapper, MenuListWrapper, MenuList, WestaLogo } from '../../styles/components/NavbarSt';
+import { NavWrapper, MenuList, WestaLogo, MakeButton } from '../../styles/components/NavbarSt';
+import { ModalSt } from '../../styles/components/AddPostModalSt';
+
+// 게시글 생성 모달창
+import AddPostModal from '../AddPost/AddPostModal';
 
 const Navbar = () => {
+  const [open, setOpen] = useState(false);
+
   return (
     <NavWrapper>
       <Link href="/home">
@@ -29,19 +35,19 @@ const Navbar = () => {
           <HomeOutlined />
           <span>홈</span>
         </Link>
-        <Link href="/myPage">
+        <Link href="/search">
           <SearchOutlined />
           <span>검색</span>
         </Link>
-        <Link href="/myPage">
+        <Link href="/explore">
           <CompassOutlined />
           <span>탐색 탭</span>
         </Link>
-        <Link href="/myPage">
+        <Link href="/reels">
           <PlaySquareOutlined />
           <span>릴스</span>
         </Link>
-        <Link href="/myPage">
+        <Link href="/direct">
           <SendOutlined />
           <span>메세지</span>
         </Link>
@@ -49,11 +55,22 @@ const Navbar = () => {
           <HeartOutlined />
           <span>알림</span>
         </Link>
-        <Link href="/myPage">
+
+        <MakeButton onClick={() => setOpen(true)}>
           <PlusCircleOutlined />
           <span>만들기</span>
-        </Link>
-        <Link href="/myPage">
+        </MakeButton>
+        <ModalSt
+          title="새 게시물 만들기"
+          centered
+          open={open}
+          onOk={() => setOpen(false)}
+          onCancel={() => setOpen(false)}
+          width={1000}>
+          <AddPostModal />
+        </ModalSt>
+
+        <Link href="/user/kyh0506_">
           {1 ? (
             <Avatar size={22} src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
           ) : (
