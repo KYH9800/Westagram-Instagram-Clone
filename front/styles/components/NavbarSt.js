@@ -9,7 +9,7 @@ export const NavWrapper = styled.div`
   background-color: #fff;
 
   width: 310px;
-  height: 100vh;
+  height: 100%;
 
   border-right: 1px solid #9b9b9b;
 `;
@@ -37,4 +37,8 @@ export const MenuList = styled.div`
 export const WestaLogo = styled.img`
   margin: 20px 0 20px 12px;
   height: 30px;
+`;
+
+export const MakeButton = styled.a`
+  cursor: pointer;
 `;

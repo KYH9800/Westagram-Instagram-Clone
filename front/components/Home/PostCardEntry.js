@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 // styled-components
 import {
   HeartOutlinedSt,
@@ -20,16 +21,25 @@ import {
   CommentInput,
   CommentSubmitBtn,
 } from '../../styles/components/PostCardSt';
+import { CustomLink } from '../../styles/Customs/CustomSt';
 // Avatar
 import { AvatarSt } from '../../styles/components/UserInfoSt';
 
+/*****************************************************
+ * PostCardImgWrapper 태그 부분
+ * 게시글 이미지 여러장 react-slick 활용하기
+ *****************************************************/
 const PostCardEntry = () => {
   return (
     <PostCard>
       <CardHeader>
-        <AvatarSt size={42} src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
+        <CustomLink href="/user/rarax__x">
+          <AvatarSt size={42} src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
+        </CustomLink>
         <CerdInfo>
-          <div>rarax__x</div>
+          <CustomLink href="/user/rarax__x">
+            <div>rarax__x</div>
+          </CustomLink>
           <span>위치</span>
         </CerdInfo>
       </CardHeader>
@@ -48,15 +58,24 @@ const PostCardEntry = () => {
         </span>
       </ClickEventBtnBox>
       <LikeInfo>
-        <UserName>rarax__w</UserName> 외에 <span>100명</span>의 사용자가 좋아합니다.
+        <UserName>
+          <CustomLink href="/user/rarax__x">rarax__w</CustomLink>
+        </UserName>
+        외에 <span>100명</span>의 사용자가 좋아합니다.
       </LikeInfo>
       <Content>
-        <UserName>rarax__w</UserName> 날씨가 좋다 <ContentMore>...더보기</ContentMore>
+        <UserName>
+          <CustomLink href="/user/rarax__x">rarax__w</CustomLink>
+        </UserName>
+        날씨가 좋다 <ContentMore>...더보기</ContentMore>
       </Content>
       <CommentCount>댓글 3개 모두보기</CommentCount>
       <CommentBox>
         <div>
-          <UserName>rarax__w</UserName> <span>댓글을 답니다</span>
+          <UserName>
+            <CustomLink href="/user/rarax__x">rarax__w</CustomLink>
+          </UserName>
+          <span>댓글을 답니다</span>
         </div>
         <div>
           <CommentHeartOutlinedSt />

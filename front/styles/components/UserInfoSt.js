@@ -111,9 +111,9 @@ export const RecommendUserName = styled.div`
 `;
 
 // footer
-export const UserInfoFooter = styled.div`
+export const UserInfoFooterSt = styled.div`
   margin: 6px 9px;
-  width: 180px;
+  width: 300px;
 
   div {
     margin: 17px 0;
@@ -125,9 +125,13 @@ export const UserInfoFooter = styled.div`
     color: #bbbbbb;
   }
 
-  span {
+  a {
     cursor: pointer;
     user-select: none;
+    color: #bbbbbb;
+    text-decoration: none;
+    margin: 0 1.3px;
+
     :hover {
       color: gray;
       text-decoration: underline;

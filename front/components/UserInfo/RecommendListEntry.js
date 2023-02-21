@@ -9,15 +9,20 @@ import {
   RecommendUserName,
   ChangeBtn,
 } from '../../styles/components/UserInfoSt';
+import { CustomLink } from '../../styles/Customs/CustomSt';
 
 const RecommendListEntry = () => {
   return (
     <div>
       <RecommendMyInfoArea>
         <MyLogoName>
-          <AvatarSt size={38} src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
+          <CustomLink href="/user/rarax_k">
+            <AvatarSt size={38} src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
+          </CustomLink>
           <RecommendNameWrapper>
-            <RecommendUserID>rarax_k</RecommendUserID>
+            <RecommendUserID>
+              <CustomLink href="/user/rarax_k">rarax_k</CustomLink>
+            </RecommendUserID>
             <RecommendUserName>yoon_tae_woo님외 1명이 팔로우 합니다.</RecommendUserName>
           </RecommendNameWrapper>
         </MyLogoName>

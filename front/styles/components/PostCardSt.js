@@ -1,7 +1,9 @@
 import styled from 'styled-components';
 import { HeartOutlined, MessageOutlined, ShareAltOutlined } from '@ant-design/icons';
 
-// 좋아요/댓글/공유하기 아이콘 버튼 커스텀
+/********************************
+ * 좋아요/댓글/공유하기 아이콘 버튼 커스텀
+ ********************************/
 export const HeartOutlinedSt = styled(HeartOutlined)`
   cursor: pointer;
   font-size: 21px;
@@ -17,12 +19,16 @@ export const ShareAltOutlinedSt = styled(ShareAltOutlined)`
   font-size: 21px;
 `;
 
-// PostCard
+/********************************
+ * PostCard
+ ********************************/
 export const PostsBox = styled.div`
   margin-top: 20px;
 `;
 
-// PostCardEntry
+/********************************
+ * PostCardEntry
+ ********************************/
 export const PostCard = styled.div`
   label {
     display: none;
@@ -152,4 +158,12 @@ export const CommentSubmitBtn = styled.a`
   color: rgb(0 150 246);
   font-weight: 700;
   line-height: 35px;
+
+  :hover {
+    color: rgb(66 115 146);
+  }
+
+  :active {
+    color: rgb(0 150 246);
+  }
 `;
