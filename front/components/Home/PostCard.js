@@ -2,13 +2,22 @@ import React from 'react';
 // components
 import PostCardEntry from '../Home/PostCardEntry';
 // styled-components
-import {} from '../../styles/components/PostCardSt';
+import { PostsBox } from '../../styles/components/PostCardSt';
 
 const PostCard = () => {
   return (
-    <>
+    <PostsBox>
       <PostCardEntry />
-    </>
+      <PostCardEntry />
+      <PostCardEntry />
+      <PostCardEntry />
+      <PostCardEntry />
+      <PostCardEntry />
+      <PostCardEntry />
+      <PostCardEntry />
+      <PostCardEntry />
+      <PostCardEntry />
+    </PostsBox>
   );
 };
 

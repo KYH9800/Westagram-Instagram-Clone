@@ -3,24 +3,20 @@ import PropTypes from 'prop-types';
 
 // components
 import Navbar from '../NavbarList/Navbar';
-import UserInfoCard from '../UserInfo/UserInfoCard';
 
 // styled-components
-import { GridWrapper, Main, Children, UserArea } from '../../styles/components/AppLayoutSt';
+import { Main, Children } from '../../styles/components/AppLayoutSt';
 
 const AppLayout = ({ children }) => {
   // TODO...
 
   return (
-    <GridWrapper>
+    <>
       <Navbar />
       <Main>
         <Children>{children}</Children>
-        <UserArea>
-          <UserInfoCard />
-        </UserArea>
       </Main>
-    </GridWrapper>
+    </>
   );
 };
 
