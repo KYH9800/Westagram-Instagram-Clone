@@ -9,7 +9,5 @@ export const Main = styled.main`
 `;
 
 export const Children = styled.div`
-  margin-right: 45px;
-
-  width: 450px;
+  width: 470px;
 `;

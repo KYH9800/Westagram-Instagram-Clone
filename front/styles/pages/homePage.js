@@ -13,15 +13,6 @@ export const GridWrapper = styled.div`
 `;
 
 export const UserArea = styled.div`
-  background-color: gray;
-
-  margin-left: 50px;
-
-  width: 320px;
-  height: 43vh;
-`;
-
-// UserInfoCard
-export const UserInfoCardBox = styled.div`
-  width: 470px;
+  margin-top: 5px;
+  margin: 6px 50px;
 `;

@@ -3,6 +3,7 @@ import styled from 'styled-components';
 // 메인 왼쪽 바
 export const NavWrapper = styled.div`
   position: fixed;
+  top: 0;
 
   z-index: 999;
   background-color: #fff;
@@ -11,11 +12,6 @@ export const NavWrapper = styled.div`
   height: 100vh;
 
   border-right: 1px solid #9b9b9b;
-`;
-
-// 메인 왼쪽 바 디테일
-export const MenuListWrapper = styled.div`
-  margin-left: 20px;
 `;
 
 export const MenuList = styled.div`
@@ -39,6 +35,6 @@ export const MenuList = styled.div`
 
 // Westagram logo
 export const WestaLogo = styled.img`
-  margin: 30px 0 20px 0;
+  margin: 20px 0 20px 12px;
   height: 30px;
 `;

@@ -19,51 +19,49 @@ import { NavWrapper, MenuListWrapper, MenuList, WestaLogo } from '../../styles/c
 const Navbar = () => {
   return (
     <NavWrapper>
-      <MenuListWrapper>
+      <Link href="/home">
+        <div>
+          <WestaLogo src="/images/Westagram.png" />
+        </div>
+      </Link>
+      <MenuList>
         <Link href="/home">
-          <div>
-            <WestaLogo src="/images/Westagram.png" />
-          </div>
+          <HomeOutlined />
+          <span>홈</span>
         </Link>
-        <MenuList>
-          <Link href="/home">
-            <HomeOutlined />
-            <span>홈</span>
-          </Link>
-          <Link href="/myPage">
-            <SearchOutlined />
-            <span>검색</span>
-          </Link>
-          <Link href="/myPage">
-            <CompassOutlined />
-            <span>탐색 탭</span>
-          </Link>
-          <Link href="/myPage">
-            <PlaySquareOutlined />
-            <span>릴스</span>
-          </Link>
-          <Link href="/myPage">
-            <SendOutlined />
-            <span>메세지</span>
-          </Link>
-          <Link href="/myPage">
-            <HeartOutlined />
-            <span>알림</span>
-          </Link>
-          <Link href="/myPage">
-            <PlusCircleOutlined />
-            <span>만들기</span>
-          </Link>
-          <Link href="/myPage">
-            {1 ? (
-              <Avatar size={22} src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
-            ) : (
-              <Avatar size={22} icon={<UserOutlined />} />
-            )}
-            <span>프로필</span>
-          </Link>
-        </MenuList>
-      </MenuListWrapper>
+        <Link href="/myPage">
+          <SearchOutlined />
+          <span>검색</span>
+        </Link>
+        <Link href="/myPage">
+          <CompassOutlined />
+          <span>탐색 탭</span>
+        </Link>
+        <Link href="/myPage">
+          <PlaySquareOutlined />
+          <span>릴스</span>
+        </Link>
+        <Link href="/myPage">
+          <SendOutlined />
+          <span>메세지</span>
+        </Link>
+        <Link href="/myPage">
+          <HeartOutlined />
+          <span>알림</span>
+        </Link>
+        <Link href="/myPage">
+          <PlusCircleOutlined />
+          <span>만들기</span>
+        </Link>
+        <Link href="/myPage">
+          {1 ? (
+            <Avatar size={22} src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
+          ) : (
+            <Avatar size={22} icon={<UserOutlined />} />
+          )}
+          <span>프로필</span>
+        </Link>
+      </MenuList>
     </NavWrapper>
   );
 };
